@@ -8,18 +8,15 @@
     justify-content: center;
 }
 
-#calculator-body {
+#calculator-container {
     /*border: 3px solid white;*/
     height: 600px;
     width: 400px;
     background-color: lightblue;
     border-radius: 50px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-
-    grid-column: span 4;
-    grid-row: span 4;
-
 
 }
 
@@ -27,6 +24,22 @@
     width: 80%;
     height: 10%;
     background-color: #152238;
-    /*margin: 30px;*/
+    margin: 30px;
+}
+
+.buttons-container {
+    width: 80%;
+    height: 70%;
+    border: 3px solid white;
+    margin: 30px;
+    display: grid;
+}
+
+button {
+    height: 60px;
+    background-color: #1c4966;
+    border-radius: 25px;
+    color: white;
+    font-size: larger;
 }
 
