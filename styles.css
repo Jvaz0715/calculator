@@ -14,14 +14,40 @@
     width: 400px;
     background-color: lightblue;
     border-radius: 50px;
-    display: flex;
     justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 
 }
 
 #display {
     width: 80%;
-    height: 15%;
+    height: 10%;
     background-color: #152238;
-    margin: 30px;
+    /*margin: 30px;*/
+}
+
+.operators,
+.numbers {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    text-align: center;
+    width: 80%;
+
+}
+
+.operator {
+    background-color: #3C4363;
+    margin: 5px;
+    height: 50px;
+    width: 70px;
+}
+
+.number {
+    background-color: #93acb4;
+    margin: 5px;
+    height: 50px;
+    width: 70px;
 }
