@@ -25,7 +25,20 @@
     height: 15%;
     background-color: #152238;
     margin-top: 50px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
+
+#display-content {
+    border: 3px solid green;
+    
+}
+
 
 .buttons-container {
     width: 80%;
