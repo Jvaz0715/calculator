@@ -35,15 +35,16 @@ const numbers = document.querySelectorAll('.number');
 // Loop through each number element, add an event listener
 for (const number of numbers) {
     number.addEventListener('click', function () {
-        console.log('a number pressed');
-        console.log(number.innerText);
+      firstNumber += number.innerText;
+      display.innerHTML = firstNumber
     });
 }
 
-// Get all the number elements
+
+// Get all the operator elements
 const operators = document.querySelectorAll('.operator');
 
-// Loop through each number element, add an event listener
+// Loop through each operator element, add an event listener
 for (const operator of operators) {
     operator.addEventListener('click', function () {
         console.log('a operator pressed');
@@ -57,6 +58,9 @@ const decimal = document.querySelector('.decimal');
 decimal.addEventListener('click', function () {
     console.log('the decimal was pressed');
     console.log(decimal.innerText)
+    if (display.innerText.length > 0) {
+      firstNumber += decimal.innerText;
+    }
 })
 
 const clearAll = document.querySelector('.clear');
@@ -70,3 +74,5 @@ equals.addEventListener('click', function () {
     console.log('the equals was pressed');
     console.log(equals.innerText)
 })
+
+const display = document.querySelector('.display');
