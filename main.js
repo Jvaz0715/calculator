@@ -13,11 +13,13 @@ buttons.addEventListener('click', event => {
         const action = button.dataset.action;
         const buttonContent = button.textContent;
         const displayNumber = display.textContent;
+        const previousButtonType = calculator.dataset.previousButtonType;
+    
 
         // checks if button pressed is number
         if (!action) {
             //adds number and appends following numbers
-            if (displayNumber === '0') {
+            if (displayNumber === '0' || previousButtonType === 'operator') {
                 display.textContent = buttonContent;
             } else {
                 display.textContent = displayNumber + buttonContent;
@@ -30,7 +32,9 @@ buttons.addEventListener('click', event => {
             action === "multiply" ||
             action === "divide"
         ) {
-            console.log("you pressed an operator button")
+            // adds a class to operator functions
+            button.classList.add('is-depressed');
+            calculator.dataset.previousButtonType = "operator"
         }
 
         if (action === "decimal") {
@@ -44,5 +48,8 @@ buttons.addEventListener('click', event => {
         if (action === "calculate") {
             console.log('you pressed the equal button')
         }
+         // remove .is-depressed class from all buttons
+        Array.from(button.parentNode.children)
+            .forEach(b => b.classList.remove('is-depressed'));
     }
 })
