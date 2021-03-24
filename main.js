@@ -1,55 +1,72 @@
-const calculator = document.querySelector("#calculator-container");
+// One approach is to store our two numbers and one operation as strings so that 
+// we can easily add characters as the user presses buttons
+let firstNumber = '';
+let operation = '';
+let secondNumber = '';
 
-const buttons = calculator.querySelector(".buttons-container");
+// Calculates the result of the current expression if it is valid, then displays the result on the screen
+function calcResult() {
+  // TODO
+}
 
-const display = document.querySelector(".display");
+// Handles when an operation button is pressed (+, -, /, *)
+function operationPressed(op) {
+  // TODO
+}
 
-buttons.addEventListener('click', event => {
-    if (event.target.matches('button')) {
-        //do something
-        //console.log('something was clicked')
+// Handles when a number button is pressed
+function numberPressed(number) {
+  // TODO
+}
 
-        const button = event.target;
-        const action = button.dataset.action;
-        const buttonContent = button.textContent;
-        const displayNumber = display.textContent;
-        const previousButtonType = calculator.dataset.previousButtonType;
-    
+// Clears the screen
+function clearScreen() {
+  // TODO
+}
 
-        // checks if button pressed is number
-        if (!action) {
-            //adds number and appends following numbers
-            if (displayNumber === '0' || previousButtonType === 'operator') {
-                display.textContent = buttonContent;
-            } else {
-                display.textContent = displayNumber + buttonContent;
-            }
-        }
-        //checks if button is an operator
-        if (
-            action === "add" ||
-            action === "subtract" ||
-            action === "multiply" ||
-            action === "divide"
-        ) {
-            // adds a class to operator functions
-            button.classList.add('is-depressed');
-            calculator.dataset.previousButtonType = "operator"
-        }
+// Updates the screen based on `firstNumber`, `operation`, and `secondNumber`
+function updateScreen() {
+  // TODO
+}
 
-        if (action === "decimal") {
-            display.textContent = displayNumber + '.'
-        }
+// Get all the number elements
+const numbers = document.querySelectorAll('.number');
 
-        if (action === "clear") {
-            console.log('you pressed the clear button')
-        }
+// Loop through each number element, add an event listener
+for (const number of numbers) {
+    number.addEventListener('click', function () {
+        console.log('a number pressed');
+        console.log(number.innerText);
+    });
+}
 
-        if (action === "calculate") {
-            console.log('you pressed the equal button')
-        }
-         // remove .is-depressed class from all buttons
-        Array.from(button.parentNode.children)
-            .forEach(b => b.classList.remove('is-depressed'));
-    }
+// Get all the number elements
+const operators = document.querySelectorAll('.operator');
+
+// Loop through each number element, add an event listener
+for (const operator of operators) {
+    operator.addEventListener('click', function () {
+        console.log('a operator pressed');
+        console.log(operator.innerText);
+    });
+}
+
+//get the decimal, clear, equals
+
+const decimal = document.querySelector('.decimal');
+decimal.addEventListener('click', function () {
+    console.log('the decimal was pressed');
+    console.log(decimal.innerText)
+})
+
+const clearAll = document.querySelector('.clear');
+clearAll.addEventListener('click', function () {
+    console.log('the clear was pressed');
+    console.log(clearAll.innerText)
+})
+
+const equals = document.querySelector('.equals');
+equals.addEventListener('click', function () {
+    console.log('the equals was pressed');
+    console.log(equals.innerText)
 })
