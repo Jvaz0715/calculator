@@ -22,17 +22,19 @@
 
 #display {
     width: 80%;
-    height: 10%;
+    height: 15%;
     background-color: #152238;
-    margin: 30px;
+    margin-top: 50px;
 }
 
 .buttons-container {
     width: 80%;
-    height: 70%;
-    border: 3px solid white;
+    height: 65%;
+    /*border: 3px solid white;*/
     margin: 30px;
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
 }
 
 button {
@@ -41,5 +43,18 @@ button {
     border-radius: 25px;
     color: white;
     font-size: larger;
+    border: none;
 }
 
+.number {
+    background-color: #6699cc;
+}
+
+.equals {
+    background-color: #ff7034;
+    grid-row-start: 2;
+    grid-row-end: 6;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    height: 100%;
+}
