@@ -19,10 +19,10 @@
 
             <div class="buttons-container">
                 <!-- Sets the operator buttons-->
-                <button type="button" class ="operator" value="+">+</button>
-                <button type="button" class ="operator" value="-">-</button>
-                <button type="button" class ="operator" value="x">&times;</button>
-                <button type="button" class ="operator" value="/">&divide;</button>
+                <button type="button" class ="operator" data-action="add" value="+">+</button>
+                <button type="button" class ="operator"  data-action="subtract" value="-">-</button>
+                <button type="button" class ="operator" data-action="multiply" value="x">&times;</button>
+                <button type="button" class ="operator" data-action="divide" value="/">&divide;</button>
 
                 <!-- Sets the numbers buttons-->
                 <button type="button" class ="number" value="7">7</button>
@@ -39,10 +39,10 @@
 
                 <!-- Sets the 0, equal, ac, and decimal buttons-->
                 <button type="button" class ="number" value="0">0</button>
-                <button type="button" class ="number" value=".">.</button>
-                <button type="button" class ="clear" value="clear">C</button>
+                <button type="button" data-action="decimal" class ="number" value=".">.</button>
+                <button type="button" class ="clear" data-action="clear" value="clear">C</button>
 
-                <button type="button" class ="equals" value="=">=</button>
+                <button type="button" class ="equals" data-action="calculate" value="=">=</button>
                 
 
             </div>
