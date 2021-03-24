@@ -2,6 +2,8 @@ const calculator = document.querySelector("#calculator-container");
 
 const buttons = calculator.querySelector(".buttons-container");
 
+const display = document.querySelector(".display");
+
 buttons.addEventListener('click', event => {
     if (event.target.matches('button')) {
         //do something
@@ -9,9 +11,16 @@ buttons.addEventListener('click', event => {
 
         const button = event.target;
         const action = button.dataset.action;
+        const buttonContent = button.textContent;
+        const displayNumber = display.textContent;
+
         // checks if button pressed is number
         if (!action) {
-            console.log('You pressed a number');
+            if (displayNumber === '0') {
+                display.textContent = buttonContent;
+            } else {
+                display.textContent = displayNumber + buttonContent;
+            }
         }
         //checks if button is an operator
         if (
