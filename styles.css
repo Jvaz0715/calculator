@@ -76,7 +76,6 @@ button:focus {
 }
 
 .number,
-.decimal,
 .clear {
     background-color: #6699cc;
 }
