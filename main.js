@@ -20,8 +20,19 @@ buttons.addEventListener('click', event => {
             action === "multiply" ||
             action === "divide"
         ) {
-            console.log("you pressed an operator key")
+            console.log("you pressed an operator button")
         }
 
+        if (action === "decimal") {
+            console.log('you pressed the decimal button')
+        }
+
+        if (action === "clear") {
+            console.log('you pressed the clear button')
+        }
+
+        if (action === "calculate") {
+            console.log('you pressed the equal button')
+        }
     }
 })
