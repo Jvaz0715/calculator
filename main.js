@@ -29,7 +29,10 @@ const equals = document.querySelector(".equals");
 const decimal = document.querySelector(".decimal");
 
 //the clear button
-const clear = document.querySelector(".clear")
+const clear = document.querySelector(".clear");
+clear.addEventListener('click', function() {
+    display.innerHTML = '';
+})
 
 // grabs display
 const display = document.querySelector("#display-content");
