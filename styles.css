@@ -42,7 +42,9 @@ button {
     background-color: #1c4966;
     border-radius: 25px;
     color: white;
-    font-size: larger;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     border: none;
 }
 
@@ -51,7 +53,7 @@ button {
 }
 
 .equals {
-    background-color: #ff7034;
+    background-color: #cc5a2a;
     grid-row-start: 2;
     grid-row-end: 6;
     grid-column-start: 4;
