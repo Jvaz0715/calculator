@@ -46,6 +46,21 @@ button {
     font-size: 25px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     border: none;
+    box-shadow: 5px 5px 5px gray;
+}
+
+button:hover {
+    background-color: darkgrey;
+    height: 65px;
+}
+
+button:focus {
+    outline: none;
+    
+}
+
+.equals:hover {
+    height: 350px;
 }
 
 .number {
