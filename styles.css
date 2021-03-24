@@ -35,8 +35,7 @@
 }
 
 #display-content {
-    border: 3px solid green;
-    
+    /*border: 3px solid green;*/
 }
 
 
@@ -76,7 +75,9 @@ button:focus {
     height: 350px;
 }
 
-.number {
+.number,
+.decimal,
+.clear {
     background-color: #6699cc;
 }
 

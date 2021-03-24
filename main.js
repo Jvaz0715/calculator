@@ -1,8 +1,20 @@
-//First try to get the display to update as numbers are pressed
+//lets declare variables to make them easier to grab them
 
+// all of numbers buttons
+const numberButtons = document.querySelectorAll(".number");
 
-//lets declare variables to make it easier to grab them
+//all of the operations
+const operatorButtons = document.querySelectorAll(".operator");
 
-display = document.querySelector("#display");
+//the equal sign
+const equals = document.querySelector(".equals");
 
-//create a function that will update display as a number is clicked;
+// the decimal button
+const decimal = document.querySelector(".decimal");
+
+//the clear button
+const clear = document.querySelector(".clear")
+
+// grabs display
+const display = document.querySelector("#display-content");
+
