@@ -16,6 +16,7 @@ buttons.addEventListener('click', event => {
 
         // checks if button pressed is number
         if (!action) {
+            //adds number and appends following numbers
             if (displayNumber === '0') {
                 display.textContent = buttonContent;
             } else {
@@ -33,7 +34,7 @@ buttons.addEventListener('click', event => {
         }
 
         if (action === "decimal") {
-            console.log('you pressed the decimal button')
+            display.textContent = displayNumber + '.'
         }
 
         if (action === "clear") {
