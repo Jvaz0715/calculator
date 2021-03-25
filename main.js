@@ -17,6 +17,7 @@ function operationPressed(op) {
 // Handles when a number button is pressed
 function numberPressed(number) {
   // TODO
+  
 }
 
 // Clears the screen
