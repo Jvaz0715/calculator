@@ -11,7 +11,8 @@
     <div class="container" id="container">
         <div id="calculator-container">
             
-            <div class="display">0</div>
+            <!--<div class="display">0</div>-->
+            <input type="text" class="display" value="" disabled />
 
             <div class="buttons-container">
                 <!-- Sets the operator buttons-->
@@ -38,12 +39,12 @@
                 <button type="button" data-action="decimal" class ="decimal" value=".">.</button>
                 <button type="button" class ="clear" data-action="clear" value="clear">C</button>
 
-                <button type="button" class ="equals" data-action="calculate" value="=">=</button>
+                <button type="button" class ="equals operator" data-action="calculate" value="=">=</button>
                 
 
             </div>
         </div>
     </div>
-    <script src="main.js"></script>
+    <script src="code-along.js"></script>
 </body>
 </html>
