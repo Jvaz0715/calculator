@@ -44,6 +44,11 @@ function handleOperator(nextOperator) {
     if (firstNumber === null && !isNaN(inputValue)) {
         // update the firstNumber property
         calculator.firstNumber = inputValue;
+    } else if (operator) {
+        const result = calculate(firstNumber, inputValue, operator);
+
+        calculator.displayValue = String(result);
+        calculator.firstNumber = result;
     }
 
     calculator.secondNumber = true;
