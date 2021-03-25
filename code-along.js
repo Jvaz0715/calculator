@@ -20,9 +20,6 @@ function inputDigit(digit) {
         //overwrite 'displayValue' if the current value is '0', otherwise append new digit to number
         calculator.displayValue = displayValue === '0' ? digit : displayValue + digit;
     }
-    
-    
-
     //test calculator
     console.log(calculator);
 }
@@ -55,6 +52,23 @@ function handleOperator(nextOperator) {
     //test calculator
     console.log(calculator);
 }
+
+//create a calculate function that will calculate the expression and save the result as the new firstNumber
+
+function calculate(firstNumber, secondNumber, operator) {
+    if (operator === "+") {
+        return firstNumber + secondNumber;
+    } else if (operator === "-") {
+        return firstNumber - secondNumber;
+    } else if (operator === "*") {
+        return firstNumber * secondNumber;
+    } else if (operator === "/") {
+        return firstNumber / secondNumber;
+    }
+
+    return secondNumber;
+}
+
 
 //create a function that will update the display
 
