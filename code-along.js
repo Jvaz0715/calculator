@@ -8,6 +8,14 @@ const calculator = {
     operator: null,
 }
 
+//create a function called input digit so display is updated with digits clicked
+
+function inputDigit(digit) {
+    const { displayValue } = calculator;
+    //overwrite 'displayValue' if the current value is '0', otherwise append new digit to number
+    calculator.displayValue = displayValue === '0' ? digit :displayValue + digit;
+}
+
 //create a function that will update the display
 
 function updateDisplay() {
@@ -49,7 +57,10 @@ keys.addEventListener('click', (event) => {
         return;
     }
 
-    console.log('digit', target.value);
+    //console.log('digit', target.value);// replaced with below to update digits as clicked
+
+    inputDigit(target.value);
+    updateDisplay();
 });
 
 
