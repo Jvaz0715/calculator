@@ -82,6 +82,16 @@ function calculate(firstNumber, secondNumber, operator) {
     return secondNumber;
 }
 
+//create a function that will clear the display
+
+function resetCalculator() {
+    calculator.displayValue = '0';
+    calculator.firstNumber = null;
+    calculator.secondNumber = false;
+    calculator.operator = null;
+    console.log(calculator);
+}
+
 
 //create a function that will update the display
 
@@ -124,7 +134,9 @@ keys.addEventListener('click', (event) => {
     }
 
     if(target.classList.contains('clear')) {
-        console.log('clear', target.value);
+        //console.log('clear', target.value);// replaced with below
+        resetCalculator();
+        updateDisplay();
         return;
     }
 
