@@ -16,6 +16,15 @@ function inputDigit(digit) {
     calculator.displayValue = displayValue === '0' ? digit :displayValue + digit;
 }
 
+//create a function to handle decimal point input
+function inputDecimal(dot) {
+    //if the displayValue property does not contain a decimal point
+    if (!calculator.displayValue.includes(dot)) {
+        //append the decimal point
+        calculator.displayValue += dot;
+    }
+}
+
 //create a function that will update the display
 
 function updateDisplay() {
@@ -48,7 +57,9 @@ keys.addEventListener('click', (event) => {
     }
 
     if (target.classList.contains('decimal')) {
-        console.log('decimal', target.value);
+        //console.log('decimal', target.value);//replaced with below
+        inputDecimal(target.value);
+        updateDisplay();
         return;
     }
 
