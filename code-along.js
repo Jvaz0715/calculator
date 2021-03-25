@@ -40,6 +40,14 @@ function handleOperator(nextOperator) {
     //parsefloat converts the string contents of displayValue to a floating-point number
     const inputValue = parseFloat(displayValue);
 
+    //allows for user to change their mind on operator used if clicks wrong operator, without having to clear and start over
+
+    if (operator && calculator.secondNumber) {
+        calculator.operator = nextOperator;
+        console.log(calculator);
+        return;
+    }
+
     //verify that firstNumber is null and that the inputValue is not a NAN value
     if (firstNumber === null && !isNaN(inputValue)) {
         // update the firstNumber property
