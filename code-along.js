@@ -11,9 +11,20 @@ const calculator = {
 //create a function called input digit so display is updated with digits clicked
 
 function inputDigit(digit) {
-    const { displayValue } = calculator;
-    //overwrite 'displayValue' if the current value is '0', otherwise append new digit to number
-    calculator.displayValue = displayValue === '0' ? digit :displayValue + digit;
+    const { displayValue, secondNumber } = calculator;
+    //accounts for empty second number to add second number
+    if (secondNumber === true) {
+        calculator.displayValue = digit;
+        calculator.secondNumber = false;
+    } else {
+        //overwrite 'displayValue' if the current value is '0', otherwise append new digit to number
+        calculator.displayValue = displayValue === '0' ? digit : displayValue + digit;
+    }
+    
+    
+
+    //test calculator
+    console.log(calculator);
 }
 
 //create a function to handle decimal point input
@@ -23,6 +34,26 @@ function inputDecimal(dot) {
         //append the decimal point
         calculator.displayValue += dot;
     }
+}
+
+//create a function that handles operators +, -, *, /, and =
+function handleOperator(nextOperator) {
+    //destructure the properties on the calculator object
+    const { firstNumber, displayValue, operator } = calculator;
+    //parsefloat converts the string contents of displayValue to a floating-point number
+    const inputValue = parseFloat(displayValue);
+
+    //verify that firstNumber is null and that the inputValue is not a NAN value
+    if (firstNumber === null && !isNaN(inputValue)) {
+        // update the firstNumber property
+        calculator.firstNumber = inputValue;
+    }
+
+    calculator.secondNumber = true;
+    calculator.operator = nextOperator;
+
+    //test calculator
+    console.log(calculator);
 }
 
 //create a function that will update the display
@@ -52,7 +83,9 @@ keys.addEventListener('click', (event) => {
     }
 
     if (target.classList.contains('operator')) {
-        console.log('operator', target.value);
+        //console.log('operator', target.value);//replaced with bellow
+        handleOperator(target.value);
+        updateDisplay();
         return;
     }
 
